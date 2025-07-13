@@ -13,5 +13,14 @@
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
     "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^8.0.0",
+    "node-pg-migrate": "^8.0.3"
+  },
+  "scripts": {
+    "migrate": "dotenv -e .env -- node-pg-migrate up",
+    "migrate:down": "dotenv -e .env -- node-pg-migrate down"
   }
+
 }
