@@ -1,5 +1,5 @@
-require('dotenv').config()
-const { Client } = require('pg')
+import 'dotenv/config'
+import { Client } from 'pg'
 
 const client = new Client({
   host: process.env.POSTGRES_HOST,
@@ -9,4 +9,4 @@ const client = new Client({
   database: process.env.POSTGRES_DB,
 })
 
-module.exports = client
+export default client
