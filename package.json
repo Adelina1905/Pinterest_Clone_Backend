@@ -4,10 +4,12 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "dotenv -e .env -- node-pg-migrate up",
+    "migrate:down": "dotenv -e .env -- node-pg-migrate down"
   },
   "dependencies": {
     "dotenv": "^17.0.1",
@@ -17,10 +19,6 @@
   "devDependencies": {
     "dotenv-cli": "^8.0.0",
     "node-pg-migrate": "^8.0.3"
-  },
-  "scripts": {
-    "migrate": "dotenv -e .env -- node-pg-migrate up",
-    "migrate:down": "dotenv -e .env -- node-pg-migrate down"
   }
 
 }
