@@ -12,9 +12,11 @@
     "migrate:down": "dotenv -e .env -- node-pg-migrate down"
   },
   "dependencies": {
-    "dotenv": "^17.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "install": "^0.13.0",
+    "multer": "^2.0.2",
     "npm": "^11.4.2",
     "pg": "^8.16.3"
   },
